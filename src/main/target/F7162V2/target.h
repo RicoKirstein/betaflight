@@ -59,7 +59,7 @@
 
 #define USE_UART3
 #define UART3_RX_PIN            PB11
-#define UART3_TX_PIN            PB10
+#define UART3_TX_PIN            PC10
 
 #define USE_UART4
 #define UART4_RX_PIN            PA1
@@ -67,10 +67,7 @@
 #define USE_UART5
 #define UART5_TX_PIN            PA1
 
-#define USE_SOFTSERIAL1
-#define USE_SOFTSERIAL2
-
-#define SERIAL_PORT_COUNT       7
+#define SERIAL_PORT_COUNT       6
 
 #define USE_ESCSERIAL
 #define ESCSERIAL_TIMER_TX_PIN  PA8 // (Hardware=0, PPM/LED_STRIP) XXX Crash if using an LED strip.
