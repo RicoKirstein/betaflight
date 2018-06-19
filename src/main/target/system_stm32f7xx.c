@@ -229,7 +229,7 @@
           while (1);
       }
 
-#ifdef USEMCO2ASOSDCLOCK
+#ifdef USE_MCO2_AS_OSDCLOCK
       PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_PLLI2S;
       PeriphClkInitStruct.PLLI2S.PLLI2SN = 216;
       PeriphClkInitStruct.PLLI2S.PLLI2SR = 2;
