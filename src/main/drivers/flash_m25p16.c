@@ -65,6 +65,7 @@
 #define JEDEC_ID_WINBOND_W25Q64        0xEF4017
 #define JEDEC_ID_WINBOND_W25Q128       0xEF4018
 #define JEDEC_ID_CYPRESS_S25FL128L     0x016018
+#define JEDEC_ID_ISSI_IS25LP128        0x9D6018
 
 // The timeout we expect between being able to issue page program instructions
 #define DEFAULT_TIMEOUT_MILLIS       6
@@ -180,6 +181,7 @@ bool m25p16_detect(flashDevice_t *fdevice, uint32_t chipID)
     case JEDEC_ID_MICRON_N25Q128:
     case JEDEC_ID_WINBOND_W25Q128:
     case JEDEC_ID_CYPRESS_S25FL128L:
+    case JEDEC_ID_ISSI_IS25LP128:
         fdevice->geometry.sectors = 256;
         fdevice->geometry.pagesPerSector = 256;
         break;
