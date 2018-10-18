@@ -33,8 +33,9 @@ void mcoInit(const mcoConfig_t *mcoConfig)
 {
     // Only configure MCO2 with PLLI2SCLK as source for now.
     // Other MCO1 and other sources can easily be added.
+    // For all F4 and F7 varianets, MCO1 is on PA8 and MCO2 is on PC9.
 
-    if (mcoConfig->ioTag[1]) {
+    if (mcoConfig->ioTag[1] == IO_TAG(PC9)) {
         IO_t io = IOGetByTag(mcoConfig->ioTag[1]);
 #ifdef STM32F7
         HAL_RCC_MCOConfig(RCC_MCO2, RCC_MCO2SOURCE_PLLI2SCLK, RCC_MCODIV_4);
