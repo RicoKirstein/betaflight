@@ -20,6 +20,9 @@
 
 #pragma once
 
+#define USE_MCO
+#define MCO2_PIN PC9
+
 //OMNIBUSF7 TARGETS-------------------------
 #define USE_TARGET_CONFIG
 #if defined (FPVM_BETAFLIGHTF7)
