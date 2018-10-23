@@ -39,7 +39,7 @@ void mcoInit(const mcoConfig_t *mcoConfig)
         IO_t io = IOGetByTag(mcoConfig->ioTag[1]);
 #ifdef STM32F7
         HAL_RCC_MCOConfig(RCC_MCO2, RCC_MCO2SOURCE_PLLI2SCLK, RCC_MCODIV_4);
-        IOConfigGPIOAF(io, IO_CONFIG(GPIO_MODE_OUTPUT_PP, GPIO_SPEED_FREQ_VERY_HIGH,  GPIO_NOPULL), GPIO_AF0_MCO);
+        IOConfigGPIOAF(io, IO_CONFIG(GPIO_MODE_AF_PP, GPIO_SPEED_FREQ_VERY_HIGH,  GPIO_NOPULL), GPIO_AF0_MCO);
 #endif
     }
 }
